@@ -2,6 +2,8 @@ import { GraphQLObjectType, GraphQLSchema, GraphQLString } from 'graphql';
 
 import CountryQuery from './country/country.query';
 import CountryMutation from './country/country.mutation';
+import UserQuery from './user/user.query';
+import UserMutation from './user/user.mutation';
 
 const Schema = new GraphQLSchema({
   query: new GraphQLObjectType({
@@ -14,7 +16,8 @@ const Schema = new GraphQLSchema({
           return 'Hello GraphQL Query';
         }
       },
-      ...CountryQuery
+      ...CountryQuery,
+      ...UserQuery
     })
   }),
   mutation: new GraphQLObjectType({
@@ -27,7 +30,8 @@ const Schema = new GraphQLSchema({
           return 'Hello GraphQL Mutation';
         }
       },
-      ...CountryMutation
+      ...CountryMutation,
+      ...UserMutation
     })
   })
 });
