@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "lint": "eslint 'src/**/*.js'",
-    "start": "node main.js"
+    "start": "nodemon main.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,14 @@
     "url": "https://github.com/robertoachar/playground-koa-graphql-mongodb/issues"
   },
   "dependencies": {
-    "esm": "3.2.22"
+    "@koa/cors": "3.0.0",
+    "dotenv": "8.0.0",
+    "esm": "3.2.22",
+    "koa": "2.7.0",
+    "koa-bodyparser": "4.2.1",
+    "koa-helmet": "4.1.0",
+    "koa-router": "7.4.0",
+    "winston": "3.2.1"
   },
   "devDependencies": {
     "eslint": "5.16.0",
@@ -31,6 +38,7 @@
     "eslint-config-prettier": "4.2.0",
     "eslint-plugin-import": "2.17.2",
     "eslint-plugin-prettier": "3.0.1",
+    "nodemon": "1.19.0",
     "prettier": "1.17.0"
   },
   "license": "MIT"
