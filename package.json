@@ -1,0 +1,37 @@
+{
+  "name": "playground-koa-graphql-mongodb",
+  "version": "1.0.0",
+  "description": "A playground for Koa with GraphQL and MongoDB.",
+  "author": "Roberto Achar <robertoachar@gmail.com>",
+  "homepage": "https://github.com/robertoachar/playground-koa-graphql-mongodb#readme",
+  "keywords": [
+    "node"
+  ],
+  "main": "main.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint 'src/**/*.js'",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertoachar/playground-koa-graphql-mongodb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robertoachar/playground-koa-graphql-mongodb/issues"
+  },
+  "dependencies": {
+    "esm": "3.2.22"
+  },
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "4.2.0",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-prettier": "3.0.1",
+    "prettier": "1.17.0"
+  },
+  "license": "MIT"
+}
