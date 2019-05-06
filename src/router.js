@@ -1,4 +1,5 @@
 import KoaRouter from 'koa-router';
+import mongoose from 'mongoose';
 
 const router = KoaRouter();
 
@@ -7,7 +8,15 @@ router.get('/', async (ctx) => {
 });
 
 router.get('/healthz', async (ctx) => {
-  ctx.status = 200;
+  mongoose.connection.db
+    .admin()
+    .ping()
+    .then(() => {
+      ctx.status = 200;
+    })
+    .catch(() => {
+      ctx.status = 500;
+    });
 });
 
 export default router;

@@ -30,6 +30,7 @@
     "koa-bodyparser": "4.2.1",
     "koa-helmet": "4.1.0",
     "koa-router": "7.4.0",
+    "mongoose": "5.5.5",
     "winston": "3.2.1"
   },
   "devDependencies": {

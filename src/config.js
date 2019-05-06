@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const environment = ['NODE_ENV', 'PORT'];
+const environment = ['NODE_ENV', 'DATABASE', 'PORT'];
 
 environment.forEach((name) => {
   if (!process.env[name]) {
@@ -14,6 +14,7 @@ environment.forEach((name) => {
 
 const config = {
   NODE_ENV: process.env.NODE_ENV,
+  DATABASE: process.env.DATABASE,
   PORT: process.env.PORT
 };
 
