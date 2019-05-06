@@ -6,7 +6,8 @@ import CountryMutation from './country/country.mutation';
 const Schema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'Query',
-    fields: {
+    description: 'Root Query',
+    fields: () => ({
       hello: {
         type: GraphQLString,
         resolve: () => {
@@ -14,11 +15,12 @@ const Schema = new GraphQLSchema({
         }
       },
       ...CountryQuery
-    }
+    })
   }),
   mutation: new GraphQLObjectType({
     name: 'Mutation',
-    fields: {
+    description: 'Root Mutation',
+    fields: () => ({
       hello: {
         type: GraphQLString,
         resolve: () => {
@@ -26,7 +28,7 @@ const Schema = new GraphQLSchema({
         }
       },
       ...CountryMutation
-    }
+    })
   })
 });
 
