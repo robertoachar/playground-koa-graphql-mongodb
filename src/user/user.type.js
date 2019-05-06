@@ -1,6 +1,6 @@
 import { GraphQLID, GraphQLObjectType, GraphQLString } from 'graphql';
 
-import Country from '../country/country.model';
+import CountryLoader from '../country/country.loader';
 import CountryType from '../country/country.type';
 
 const UserType = new GraphQLObjectType({
@@ -17,7 +17,7 @@ const UserType = new GraphQLObjectType({
     country: {
       type: CountryType,
       resolve: async (user) => {
-        const country = await Country.findById(user.country);
+        const country = await CountryLoader.load(user.country);
 
         return country;
       }
