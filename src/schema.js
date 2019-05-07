@@ -1,9 +1,9 @@
 import { GraphQLObjectType, GraphQLSchema, GraphQLString } from 'graphql';
 
-import CountryQuery from './country/country.query';
-import CountryMutation from './country/country.mutation';
-import UserQuery from './user/user.query';
-import UserMutation from './user/user.mutation';
+import CountryQuery from './country/CountryQuery';
+import CountryMutation from './country/CountryMutation';
+import UserQuery from './user/UserQuery';
+import UserMutation from './user/UserMutation';
 
 const Schema = new GraphQLSchema({
   query: new GraphQLObjectType({

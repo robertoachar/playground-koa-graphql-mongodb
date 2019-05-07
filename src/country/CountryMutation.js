@@ -1,11 +1,8 @@
 import { GraphQLNonNull, GraphQLString } from 'graphql';
 
-import Country from './country.model';
-import CountryType from './country.type';
-import {
-  CountryCreateInputType,
-  CountryUpdateInputType
-} from './country.input';
+import Country from './CountryModel';
+import CountryType from './CountryType';
+import { CountryCreateInputType, CountryUpdateInputType } from './CountryInput';
 
 const CountryMutation = {
   createCountry: {

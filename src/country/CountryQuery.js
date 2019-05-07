@@ -1,7 +1,7 @@
 import { GraphQLID, GraphQLList, GraphQLNonNull } from 'graphql';
 
-import Country from './country.model';
-import CountryType from './country.type';
+import Country from './CountryModel';
+import CountryType from './CountryType';
 
 const CountryQuery = {
   countries: {

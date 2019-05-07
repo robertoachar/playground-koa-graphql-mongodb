@@ -1,7 +1,7 @@
 import { GraphQLID, GraphQLObjectType, GraphQLString } from 'graphql';
 
-import CountryLoader from '../country/country.loader';
-import CountryType from '../country/country.type';
+import CountryLoader from '../country/CountryLoader';
+import CountryType from '../country/CountryType';
 
 const UserType = new GraphQLObjectType({
   name: 'User',

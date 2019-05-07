@@ -1,6 +1,6 @@
 import DataLoader from 'dataloader';
 
-import Country from './country.model';
+import Country from './CountryModel';
 
 const batchCountry = async (keys) => {
   const countries = await Country.find({ _id: { $in: keys } });
